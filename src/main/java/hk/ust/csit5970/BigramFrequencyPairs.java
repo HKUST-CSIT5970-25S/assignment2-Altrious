@@ -98,7 +98,7 @@ public class BigramFrequencyPairs extends Configured implements Tool {
                 totalCount.set(sum);
                 VALUE.set(sum);
             } else {
-                VALUE.set(sum / totalCount.get());
+                VALUE.set((float) sum / (float) totalCount.get());
             }
             context.write(key, VALUE);
         }

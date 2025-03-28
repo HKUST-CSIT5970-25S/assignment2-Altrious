@@ -108,7 +108,7 @@ public class BigramFrequencyStripes extends Configured implements Tool {
                     totalCount.set(value);
                     FREQ.set(value);
                 } else {
-                    FREQ.set(value / totalCount.get());
+                    FREQ.set((float) value / (float) totalCount.get());
                 }
                 context.write(BIGRAM, FREQ);
             }
